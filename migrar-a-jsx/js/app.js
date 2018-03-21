@@ -22,13 +22,18 @@ function Cabecera(props) {
         <h1> { data.headerTitulo } </h1>
         <h2> { data.headerDescripcion } </h2>
         <h3> { data.mainSectionTitulo } </h3>
-        <div> { data.articles[0].titulo } </div>
-        <div> { data.articles[0].descripcion } </div>
-        <div> { data.articles[1].titulo } </div>
-        <div> { data.articles[1].descripcion } </div>
-        <div> { data.articles[2].titulo } </div>
-        <div> { data.articles[2].descripcion } </div>
+        {props.mainSectionArticles.map(mainSectionArticles => {
+            return <div>
+            <h1>{mainSectionArticles.titulo}</h1>
+            <p> {mainSectionArticles.descripcion} </p>
+            </div>
+        })}
         <h3> { data.asideTitulo } </h3>
+        {props.links.map(link => {
+            return <div>
+                <a> {links.href} </a>
+                 </div>
+        })}
         </header>
     );
 };

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://unpkg.com/react@15/dist/react.js"></script>
+        <script src="https://unpkg.com/react-dom@15/dist/react-dom.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.24/browser.min.js"></script>
+        <script type="text/babel"></script>
+    <title>Mensaje de react</title>
+</head>
+<body>
+    <body>
+        <div id="react-container">
+          <p>
+            Si ves esto React <strong>no</strong> está funcionando.
+          </p>
+        </div>
+      
+        <script>
+          const DOM = React.DOM
+      
+          function Saludo(props) {
+              console.log(props)
+            return DOM.h1(null, 'Hola '+props.nombre)
+          }
+      
+          ReactDOM.render(
+            Saludo({ nombre: 'Mundo' }),
+            document.getElementById('react-container')
+          );
+        </script>
+
+        
+      </body>
+</body>
+</html>
