@@ -1,43 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="https://unpkg.com/react@15/dist/react.js"></script>
-        <script src="https://unpkg.com/react-dom@15/dist/react-dom.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.24/browser.min.js"></script>
-        <script type="text/babel"></script>
+    <script src="https://unpkg.com/react-dom@15/dist/react-dom.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.24/browser.min.js"></script>
+    <script type="text/babel"></script>
     <title>DOM a HTML</title>
 </head>
+
 <body>
-        <div id="react-container">
-            </div>
-          
-            <script>
-              const DOM = React.DOM
-          
-              function Cabecera(props) {
-                const saludo = props.saludo;
-          
-                return DOM.div(null,
-                  DOM.h2(null, 'Cabecera'),
-                  DOM.h3(null, saludo),
-                  DOM.p(null,
+    <!--Etiquetas en html-->
+
+    <div>
+        <h2>Cabecera</h3>
+            <h3>Mundo</h3>
+            <p>Mundo</p>
+            <hr>
+            <p>Chau!</p>
+    </div>
+
+    <!--Etiquetas de html hechas con react y jsx-->
+
+    <div id="react-container">
+    </div>
+
+    <script>
+        const DOM = React.DOM
+
+        function Cabecera(props) {
+            const saludo = props.saludo;
+
+            return DOM.div(null,
+                DOM.h2(null, 'Cabecera'),
+                DOM.h3(null, saludo),
+                DOM.p(null,
                     saludo,
                     DOM.hr(null)
-                  ),
-                  DOM.div(null, 'Chau!')
-                )
-              }
-          
-              const saludo = 'Mundo'
-          
-              ReactDOM.render(
-                Cabecera({ saludo: saludo }),
-                document.getElementById('react-container')
-              );
-            </script>
-    
+                ),
+                DOM.div(null, 'Chau!')
+            )
+        }
+
+        const saludo = 'Mundo'
+
+        ReactDOM.render(
+            Cabecera({
+                saludo: saludo
+            }),
+            document.getElementById('react-container')
+        );
+    </script>
+
 </body>
+
 </html>

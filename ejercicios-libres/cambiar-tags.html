@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://unpkg.com/react@15/dist/react.js"></script>
+    <script src="https://unpkg.com/react-dom@15/dist/react-dom.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.24/browser.min.js"></script>
+    <script type="text/babel"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="container-react"> </div>
+
+    <script>
+        const data = {
+            titles: [{
+                titulo: 'Título 1',
+                descripcion: 'Descripcion 1'
+            }, {
+                titulo: 'Título 2',
+                descripcion: 'Descripcion 2'
+            }, {
+                titulo: 'Título 3',
+                descripcion: 'Descripcion 3'
+            }]
+        };
+
+
+        function titlesDescription(props) {
+            console.log(props.titles);
+
+            // return ( <header> {
+            //         data.titles.map(data => {
+            //             return <div>
+            //                 <h3> {
+            //                     data.titulo
+            //                 } </h3>
+            //                 <p> {
+            //                     data.descripcion
+            //                 } </p>
+            //                 </div>
+            //         })
+            //     }
+            //     </header>
+            // );
+        };
+
+        ReactDOM.render(titlesDescription(data), document.getElementById("container-react"));
+    </script>
+
+</body>
+
+</html>
